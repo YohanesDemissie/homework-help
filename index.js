@@ -32,6 +32,11 @@ let count = 0;
 function counter() {
   count += 1;
   document.getElementById("counter").innerHTML = count + "/6 tries left";
+  if(count === 7) {
+    alert("sorry you ran out of tries. Try again!");
+    //RELOADS entire page
+    location.reload();
+  }
   console.log(count)
 }
 for (let i = 0; i < squares; i++) {
