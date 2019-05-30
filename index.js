@@ -1,8 +1,9 @@
 //populate array with 7 tiles
 var tiles = []
 for (let i =0; i < 7; i++) {
-  tiles[i] = "tiles" + [i];
+  tiles[i] = "tiles";
 }
+
 
 //random number generator
 function getRandomInt(max) {
@@ -11,26 +12,40 @@ function getRandomInt(max) {
 
 //random number
 let randomNum = getRandomInt(7);
+console.log(tiles, "All 7 tiles");
 
 //add ships into tiles array while keeping them together
-let firstShipTile = tiles.splice(randomNum, 0, 'battleshipOne');
+let firstShipTile = tiles.splice(randomNum, 0, 'battleship');
 //make 2nd ship index of first battleship +1
-let secondShipTile = tiles.splice((randomNum + 1), 0, 'battleshipTwo');
+let secondShipTile = tiles.splice((randomNum + 1), 0, 'battleship');
 //make 3rd ship index of first battleship +2
-let thirdShipTile = tiles.splice((randomNum + 2), 0, 'battleshipThree');
-console.log(tiles, "All 10 tiles");
+let thirdShipTile = tiles.splice((randomNum + 2), 0, 'battleship');
 
+console.log(tiles, "ALL TILES?")
 
 //Populate DOM with tiles and ships
 var squares = tiles.length;
 var element = "<div>";
 for (let i = 0; i < squares; i++) {
-  element += "<button class=" + "tiles" + " onClick=" + " this.style.backgroundColor='red'" + ">"
+  if (tiles[i] === "tiles") {
+   element += "<button class=" + "tiles" + " onClick=" + " this.style.backgroundColor='red'" + ">"
   + tiles[i] + "</button>";
+} else if(tiles[i] === 'battleship') {
+    element += "<button class=" + "tiles" + " onClick=" + " this.style.backgroundColor='green'" + ">"
+      + tiles[i] + "</button>";
 }
 element += "</div>";
+}
+
 
 document.getElementById("demo").innerHTML = element;
+
+// for (let i = 0; i = randomNum && i == randomNum + 1 && i == randomNum +2; i++){
+//   element += "<button class=" + "tiles" + " onClick=" + " this.style.backgroundColor='green'" + ">"
+//     + tiles[i] + "</button>";
+// }
+// element += "</div>";
+
 
 
 
