@@ -1,3 +1,7 @@
+div {
+  display: inline;
+}
+
 .title {
   background: black;
   color: white;
@@ -17,6 +21,7 @@
   line-height: 50px;
 }
 
+/* POSITIONS ALL TILES IN CENTER */
 #battleshipContainer {
    display: flex;
   justify-content: center;
@@ -24,10 +29,26 @@
   justify-self: center;
 }
 
+/* CREATES EACH TILE IN SQUARE SHAPE FOR "OCEAN" */
 .tiles {
   width: 40px;
   height: 40px;
   margin: 10px;
   background: black;
   color: rgba(255, 255, 255, 0);
+}
+
+/* CREATE THE SQUARE SHAPE FOR EACH TILE OF SHIPS */
+
+.tilesHit {
+    width: 40px;
+  height: 40px;
+  margin: 10px;
+  background: black;
+  color: rgba(255, 255, 255, 0);
+}
+
+/* CHANGES COLOR ON CLICK */
+.tilesHit:focus { 
+  background-color: green;
 }

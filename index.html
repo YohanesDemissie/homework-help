@@ -6,25 +6,23 @@
   </head>
   <body>
     <h1 class="title">Bellevue Battle Ship</h1>
-    <div class="instructions">
+    <section class="instructions">
       <b class="instructions-title">Instructions:</b></br>
       There is a hidden ship under 3 consecutive tiles. Win by guessing all three tiles correctly within 6 tries. Winner receives their very own battleship! Have fun and Good Luck!
-    </div>
+    </section>
 
     <!-- DYNAMICALLY RENDER ARRAY OF SHIPS AND TILES BELOW -->
     <div id="battleshipContainer">
       <div id="demo" class="hidden"></div>
     </div>
 
+  <div class="scoreboard">
     <p id="counter"></p>
+    <p id="hits"></p>
+  </div>
 
   </body>
   <footer>
     <script type="text/javascript" src="./index.js"></script>
-    <!-- <script> let count = 0;
-function counter() {
-  document.getElementById("demo").style.color = "red";  count +=1;
-  console.log(count)
-}</script> -->
   </footer>
 </html>
