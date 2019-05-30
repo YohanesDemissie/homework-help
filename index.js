@@ -1,6 +1,6 @@
 //populate array with 7 tiles
 var tiles = []
-for (let i =0; i < 7; i++) {
+for (let i =0; i < 17; i++) {
   tiles[i] = "tiles";
 }
 
@@ -11,8 +11,8 @@ function getRandomInt(max) {
 }
 
 //random number
-let randomNum = getRandomInt(7);
-console.log(tiles, "All 7 tiles");
+let randomNum = getRandomInt(17);
+console.log(tiles, "All 17 tiles");
 
 //add ships into tiles array while keeping them together
 let firstShipTile = tiles.splice(randomNum, 0, 'battleship');
@@ -21,7 +21,7 @@ let secondShipTile = tiles.splice((randomNum + 1), 0, 'battleship');
 //make 3rd ship index of first battleship +2
 let thirdShipTile = tiles.splice((randomNum + 2), 0, 'battleship');
 
-console.log(tiles, "ALL TILES?")
+console.log(tiles, "ALL 20 TILES?")
 
 //Populate DOM with tiles and ships
 var squares = tiles.length;
