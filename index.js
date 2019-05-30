@@ -31,6 +31,7 @@ var element = "<div>";
 let count = 0;
 function counter() {
   count += 1;
+  document.getElementById("counter").innerHTML = count + "/6 tries left";
   console.log(count)
 }
 for (let i = 0; i < squares; i++) {
@@ -43,7 +44,7 @@ for (let i = 0; i < squares; i++) {
   }
   element += "</div>";
 }
-
+document.getElementById("counter").innerHTML = count
 document.getElementById("demo").innerHTML = element;
 
 
