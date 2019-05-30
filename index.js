@@ -1,5 +1,6 @@
-//populate array with 7 tiles
-var tiles = []
+//create empty array
+var tiles = [];
+//populate array with 17 tiles
 for (let i =0; i < 17; i++) {
   tiles[i] = "tiles";
 }
@@ -14,42 +15,49 @@ function getRandomInt(max) {
 let randomNum = getRandomInt(17);
 console.log(tiles, "All 17 tiles");
 
-//add ships into tiles array while keeping them together
+//add ship into tiles array while keeping them together
 let firstShipTile = tiles.splice(randomNum, 0, 'battleship');
 //make 2nd ship index of first battleship +1
 let secondShipTile = tiles.splice((randomNum + 1), 0, 'battleship');
 //make 3rd ship index of first battleship +2
 let thirdShipTile = tiles.splice((randomNum + 2), 0, 'battleship');
 
+//double check '3 added ships' are pushed to array
 console.log(tiles, "ALL 20 TILES?")
 
 //Populate DOM with tiles and ships
 var squares = tiles.length;
 var element = "<div>";
+let count = 0;
+function counter() {
+  count += 1;
+  console.log(count)
+}
 for (let i = 0; i < squares; i++) {
   if (tiles[i] === "tiles") {
-   element += "<button class=" + "tiles" + " onClick=" + " this.style.backgroundColor='red'" + ">"
+    element += "<button class=" + "tiles" + " onClick=" + "counter();" + "this.style.backgroundColor='red';" + ">"
   + tiles[i] + "</button>";
-} else if(tiles[i] === 'battleship') {
-    element += "<button class=" + "tiles" + " onClick=" + " this.style.backgroundColor='green'" + ">"
+    } else if(tiles[i] === 'battleship') {
+      element += "<button class=" + "tiles" + " onClick=" + " this.style.backgroundColor='green'" + ">"
       + tiles[i] + "</button>";
+  }
+  element += "</div>";
 }
-element += "</div>";
-}
-
 
 document.getElementById("demo").innerHTML = element;
 
-// for (let i = 0; i = randomNum && i == randomNum + 1 && i == randomNum +2; i++){
-//   element += "<button class=" + "tiles" + " onClick=" + " this.style.backgroundColor='green'" + ">"
-//     + tiles[i] + "</button>";
-// }
-// element += "</div>";
 
+// var button = document.getElementsByClassName("tiles");
+// console.log(button, "BUTTON")
+// let  count = 0;
+// element.onclick = function () {
+//   count += 1;
+//   console.log(count)
+// };
 
-
-
-//turn tiles red on click
-// document.querySelector().onclick = function () {
-//   this.style.backgroundColor = "red";
+// THIS COUNTER WORKS. TRY TO IMPLEMENT
+// let count = 0;
+// function counter() {
+//   document.getElementById("demo").style.color = "red"; count += 1;
+//   console.log(count)
 // }

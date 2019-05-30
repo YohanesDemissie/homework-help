@@ -20,6 +20,8 @@
 #battleshipContainer {
    display: flex;
   justify-content: center;
+  justify-content: space-evenly;
+  justify-self: center;
 }
 
 .tiles {
