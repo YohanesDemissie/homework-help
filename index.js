@@ -58,11 +58,12 @@ for (let i = 0; i < squares; i++) {
     element += "<button class=" + "tiles" + " onClick=" + "counter();" + "this.style.backgroundColor='red';" + ">"
   + tiles[i] + "</button>";
     } else if (tiles[i] === "battleship") {
-    element += "<button class=" + "tilesHit" + " onClick=" + " countHits();" + " this.style.backgroundColor='green';" + ">"
+    element += "<button class=" + "tilesHit" + " onClick=" + "countHits();" + "this.style.backgroundColor='green';" + ">"
       + tiles[i] + "</button>";
   }
   element += "</div>";
 }
+
 document.getElementById("counter").innerHTML = count;
 document.getElementById("hits").innerHTML = hitters;
 document.getElementById("demo").innerHTML = element;
