@@ -48,7 +48,16 @@ div {
   color: rgba(255, 255, 255, 0);
 }
 
-/* CHANGES COLOR ON CLICK */
-.tilesHit:focus { 
-  background-color: green;
+.scoreboard {
+  margin-top: 50px;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.divider {
+  /* padding-right: 60px;
+  margin-right: 60px; */
+  border-right: solid black 3px;
 }

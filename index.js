@@ -67,19 +67,3 @@ for (let i = 0; i < squares; i++) {
 document.getElementById("counter").innerHTML = count;
 document.getElementById("hits").innerHTML = hitters;
 document.getElementById("demo").innerHTML = element;
-
-
-// var button = document.getElementsByClassName("tiles");
-// console.log(button, "BUTTON")
-// let  count = 0;
-// element.onclick = function () {
-//   count += 1;
-//   console.log(count)
-// };
-
-// THIS COUNTER WORKS. TRY TO IMPLEMENT
-// let count = 0;
-// function counter() {
-//   document.getElementById("demo").style.color = "red"; count += 1;
-//   console.log(count)
-// }
